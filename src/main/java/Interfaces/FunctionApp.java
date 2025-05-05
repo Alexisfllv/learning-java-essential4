@@ -26,12 +26,18 @@ public class FunctionApp {
         return res;
     }
 
+    public String m4Espejo(String dato){
+        Function<String,String> espejo =  Function.identity();
+        return espejo.apply(dato);
+    }
+
     public static void main(String[] args) {
 
         FunctionApp app = new FunctionApp();
         System.out.println(app.m1Mayus("ana"));
         System.out.println(app.m2Suma(10));
         System.out.println(app.m3Suma2(10));
+        System.out.println(app.m4Espejo("ana"));
 
     }
 }
