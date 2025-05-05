@@ -1,5 +1,8 @@
 package Interfaces;
 
+import basic.Item;
+
+import java.math.BigDecimal;
 import java.util.function.Predicate;
 
 public class PredicateApp {
@@ -53,6 +56,14 @@ public class PredicateApp {
         System.out.println(app.m2or(19));
         System.out.println(app.m3negate(19));
         System.out.println(app.m4isEqual(10));
+
+        // entidad
+        Item i1 = new Item(1L,"carro",new BigDecimal("230.20"));
+
+        System.out.println("DATOS DE ENTIDAD");
+        System.out.println(app.m0(i1.getNombre()));
+        System.out.println(app.m1and(i1.getPrecio().intValue()));
+        System.out.println(app.m2or(i1.getPrecio().intValue()));
 
     }
 

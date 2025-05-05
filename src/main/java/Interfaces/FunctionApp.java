@@ -1,5 +1,8 @@
 package Interfaces;
 
+import basic.Item;
+
+import java.math.BigDecimal;
 import java.util.function.Function;
 
 public class FunctionApp {
@@ -38,6 +41,17 @@ public class FunctionApp {
         System.out.println(app.m2Suma(10));
         System.out.println(app.m3Suma2(10));
         System.out.println(app.m4Espejo("ana"));
+        //
+        System.out.println("DATOS DE ENTIDAD");
+        Item i1 = new Item(1L,"carro",new BigDecimal("230.75"));
+
+        System.out.println(app.m1Mayus(i1.getNombre()));
+
+        Integer res = app.m2Suma(i1.getPrecio().intValue());
+        BigDecimal valor1 = BigDecimal.valueOf(res);
+
+        System.out.println(valor1);
+
 
     }
 }
