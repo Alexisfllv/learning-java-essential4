@@ -30,6 +30,19 @@ public class PredicateApp {
         return res;
     }
 
+    private boolean m3negate(Integer dato){
+        Predicate<Integer> dato1 = x -> x > 10;
+        Predicate<Integer> dato2 = x -> x < 20;
+
+        boolean res = dato1.and(dato2.negate()).test(dato);
+        return res;
+    }
+
+    private boolean m4isEqual(Integer dato){
+        Predicate<Integer> dato1 = x -> x == 10;
+        return dato1.test(dato);
+    }
+
 
     public static void main(String[] args) {
 
@@ -38,6 +51,8 @@ public class PredicateApp {
         System.out.println(app.m0("ana"));
         System.out.println(app.m1and(19));
         System.out.println(app.m2or(19));
+        System.out.println(app.m3negate(19));
+        System.out.println(app.m4isEqual(10));
 
     }
 
